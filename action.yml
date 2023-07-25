@@ -1,16 +1,16 @@
-name: 'ligo-action'
-description: 'Run the ligo lang compiler in a github workflow'
+name: "ligo-action"
+description: "Run the ligo lang compiler in a github workflow"
 branding:
-  icon: 'search'
+  icon: "search"
 inputs:
-  cmd-line:
-    description: 'The command line to pass to the Ligo lang compiler'
+  command:
+    description: "The command line to pass to the Ligo lang compiler"
     required: true
 outputs:
   results:
-    description: 'The Ligo artefacts'
+    description: "The Ligo artefacts"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
-    - ${{ inputs.cmd-line }}
+    - ${{ inputs.command }}
