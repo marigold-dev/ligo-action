@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  ligo-action:
+    runs-on: ubuntu-latest
+    name: Test action outputs version of ligo
+    steps:
+      - name: Output version
+        id: version
+        uses: marigold-dev/ligo-action@v0.0.1
+        with:
+          cmd-line: "version"

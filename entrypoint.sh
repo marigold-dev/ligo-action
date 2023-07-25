@@ -2,4 +2,4 @@
 
 set -e
 
-ligo $2
+ligo $1

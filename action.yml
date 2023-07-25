@@ -3,10 +3,6 @@ description: 'Run the ligo lang compiler in a github workflow'
 branding:
   icon: 'search'
 inputs:
-  version:
-    description: 'The version of the ligo compiler to use'
-    required: true
-    default: '0.65.0'
   cmd-line:
     description: 'The command line to pass to the Ligo lang compiler'
     required: true
@@ -17,5 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - LIGO_VERSION=${{ inputs.version }}
     - ${{ inputs.cmd-line }}
