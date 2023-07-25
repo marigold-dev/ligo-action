@@ -6,6 +6,10 @@ inputs:
   command:
     description: "The command line to pass to the Ligo lang compiler"
     required: true
+  working_directory:
+    description: "The path where command have to be executed"
+    required: false
+    default: .
 outputs:
   results:
     description: "The Ligo artefacts"

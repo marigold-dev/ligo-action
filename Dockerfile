@@ -1,4 +1,4 @@
-FROM ligolang/ligo:0.65.0
+FROM ligolang/ligo_ci:0.70.1
 
 COPY entrypoint.sh ./entrypoint.sh
 

@@ -1,3 +1,6 @@
 #!/bin/bash
 
-/root/ligo $@
+(
+cd $INPUT_WORKING_DIRECTORY
+/root/ligo $INPUT_COMMAND
+)
