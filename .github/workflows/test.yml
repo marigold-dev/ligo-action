@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Output version
         id: version
-        uses: marigold-dev/ligo-action@v0.0.1
+        uses: marigold-dev/ligo-action@v0.0.2
         with:
           cmd-line: "version"
