@@ -1,5 +1,7 @@
 FROM ligolang/ligo:0.65.0
 
-COPY . ./
+COPY entrypoint.sh ./entrypoint.sh
 
-CMD ["ligo", "$@"]
+RUN chmod +x ./entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
