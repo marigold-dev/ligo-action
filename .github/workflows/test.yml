@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Test action outputs version of ligo
     steps:
-      - name: Output version
-        id: version
-        uses: marigold-dev/ligo-action@v0.0.4
+      - name: Ligo version
+        uses: marigold-dev/ligo-action@main
         with:
-          command: "version"
+          ligo_version: 0.70.1
+          command: version
