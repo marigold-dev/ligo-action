@@ -10,11 +10,13 @@ inputs:
     description: "The path where command have to be executed"
     required: false
     default: .
+  ligo_version:
+    description: "The version of the ligo binary to use"
+    required: true
 outputs:
   results:
     description: "The Ligo artefacts"
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.command }}
+

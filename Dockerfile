@@ -1,7 +1,15 @@
-FROM ligolang/ligo_ci:0.70.1
+FROM esydev/esy:nightly-alpine as esy
 
-COPY entrypoint.sh ./entrypoint.sh
+FROM alpine:3.18
 
-RUN chmod +x ./entrypoint.sh
+COPY --from=esy . .
+
+WORKDIR /root
+
+RUN apk add --no-cache curl jq
+
+COPY entrypoint.sh /root/entrypoint.sh
+
+RUN chmod +x /root/entrypoint.sh
 
 ENTRYPOINT ["/root/entrypoint.sh"]
