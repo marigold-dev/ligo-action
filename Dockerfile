@@ -5,6 +5,7 @@ FROM alpine:3.18
 COPY --from=esy . .
 
 WORKDIR /root
+ENV LIGO_SKIP_ANALYTICS=TRUE
 
 RUN apk add --no-cache curl jq
 
